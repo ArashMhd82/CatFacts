@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import cat1 from '../src/assets/img/92204f55-5ae3-46b9-a1dc-c44be378ba99.jpg'
+
 function App() {
 
   const [data, setData] = useState(null)
@@ -35,8 +37,9 @@ function App() {
   return (
     <>
 
-    <div className="bg-[#D8D2C2] flex justify-center items-center min-h-screen h-full p-2 sm:px-10 md:px-20">  
-      <div className="text-center bg-[#B17457] pt-10 pb-5 px-16 rounded-2xl shadow-md">  
+    <div className="bg-white relative flex justify-center items-center min-h-screen h-full p-2 sm:px-10 md:px-20">  
+      <img src={cat1} className="absolute z-30 top-3 left-7 h-[50vh]" />
+      <div className="text-center bg-[#B17457] pt-10 pb-5 px-16 rounded-2xl shadow-md z-50 max-w[500px]">  
             {loading && <h2 className="text-[#4A4947] my-1">Loading...</h2>}
             {error && <p className="text-[#4A4947]">{error}</p>}
             {data && <h1 className="text-[#4A4947] font-bold text-2xl">{data.fact}</h1>}
